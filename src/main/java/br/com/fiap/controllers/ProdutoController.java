@@ -18,7 +18,9 @@ public class ProdutoController {
 		ModelAndView model = new ModelAndView("produto/criar");
 		
 		Produto produto = new Produto();
-		model.addObject("produto", produto);
+		
+		model.addObject("produto", produto);		
+		
 		return model;
 	}
 	
