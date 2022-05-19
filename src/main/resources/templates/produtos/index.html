@@ -9,22 +9,20 @@
 	
 	<h1>Olá mundo</h1>
 	
-	<p th:text="${meunome}"></p>
 	
 	<table class="table">
 		<thead>
 			<tr>
 				<th>Id</th>
 				<th>Nome</th>
-				<th>Descrição</th>
 				<th>Valor</th>
 			</tr>
 		</thead>
 		<tbody>
-			<tr th:each="produto: ${estoque}">
+			<tr th:each="produto: ${listarProdutos}">
 				<td th:text="${produto.getId()}"></td>
 				<td th:text="${produto.getNome()}"></td>
-				<td th:text="${produto.getDescricao()}"></td>
+				
 				<td th:text="${produto.getValor()}"></td>					
 			</tr>
 		</tbody>

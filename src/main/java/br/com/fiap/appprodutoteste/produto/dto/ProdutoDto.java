@@ -1,4 +1,8 @@
-package br.com.fiap.demo.dto;
+package br.com.fiap.appprodutoteste.produto.dto;
+
+import java.math.BigDecimal;
+import javax.validation.constraints.NotBlank;
+import br.com.fiap.appprodutoteste.produto.model.Produto;
 
 public class ProdutoDto {
 	private long id;
