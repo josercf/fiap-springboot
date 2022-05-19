@@ -1,6 +1,6 @@
-package br.com.fiap.dto;
+package br.com.fiap.demo.dto;
 
-public class Produto {
+public class ProdutoDto {
 	private long id;
 	private String nome;
 	private String descricao;
