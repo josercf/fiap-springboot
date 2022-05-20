@@ -9,6 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 
@@ -31,6 +32,10 @@ public class Produto {
 	@OneToOne(cascade = CascadeType.DETACH)
 	@JoinColumn(name = "id_fabricante")
 	private Fabricante fabricante;
+	
+	@ManyToOne
+	@JoinColumn
+	private Categoria categoria;
 	
 	public Produto() {
 	}
