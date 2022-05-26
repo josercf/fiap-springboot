@@ -28,15 +28,7 @@ public class Produto {
 	private String nome; 
 	private Integer quantidade; 
 	private BigDecimal valor;
-	
-	@OneToOne(cascade = CascadeType.DETACH)
-	@JoinColumn(name = "id_fabricante")
-	private Fabricante fabricante;
-	
-	@ManyToOne
-	@JoinColumn
-	private Categoria categoria;
-	
+
 	public Produto() {
 	}
 	

@@ -31,18 +31,6 @@ public class Categoria {
 	
 	private String nome;
 	
-	@OneToMany(mappedBy = "Categoria", fetch = FetchType.LAZY, cascade = CascadeType.DETACH)
-	private Set<Produto> produtos;
-	
-	
-	
-	public Set<Produto> getProdutos() {
-		return produtos;
-	}
-
-	public void setProdutos(Set<Produto> produtos) {
-		this.produtos = produtos;
-	}
 
 	public Long getId() {
 		return id;

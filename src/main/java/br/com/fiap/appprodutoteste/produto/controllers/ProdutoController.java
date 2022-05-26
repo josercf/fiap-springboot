@@ -46,22 +46,8 @@ public class ProdutoController {
 	@PostMapping("produtos")
 	public ModelAndView salvar( ProdutoDto produto) {
 		Produto produtoEntity = modelMapper.map(produto, Produto.class);
-				
-		
 		
 		produtoRepository.save(produtoEntity);
-		
-		Categoria categoria = new Categoria();
-		categoria.setNome("Periférico");
-		
-		
-		Set<Produto> items = new HashSet<Produto>();
-		items.add(produtoEntity);
-		categoria.setProdutos(items);
-		
-		
-		
-		
 		
 		return new ModelAndView("redirect:/produtos");
 	}
