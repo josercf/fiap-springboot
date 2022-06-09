@@ -1,14 +1,27 @@
 package br.com.fiap.appprodutoteste.produto.dto;
 
-import java.math.BigDecimal;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.validation.constraints.DecimalMin;
 import javax.validation.constraints.NotBlank;
-import br.com.fiap.appprodutoteste.produto.model.Produto;
+import javax.validation.constraints.NotNull;
+
+import br.com.fiap.appprodutoteste.produto.model.Status;
 
 public class ProdutoDto {
 	private long id;
+	
+	@NotNull
+	@NotBlank(message = "O campo nome deve ser informado")
 	private String nome;
 	private String descricao;
+	
+	@NotNull
+	@DecimalMin(value = "0.0")
 	private double valor;  
+	
+	@Enumerated(EnumType.STRING)
+	private Status status;
 	
 	public long getId() {
 		return id;
